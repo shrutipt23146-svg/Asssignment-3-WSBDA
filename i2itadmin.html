@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transitions and Animations</title>
+  <style>
+    /* General reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Flexbox container */
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin: 20px;
+      padding: 10px;
+      background-color: #f0f0f0;
+    }
+
+    .flex-item {
+      background-color: lightcoral;
+      padding: 20px;
+      width: 100px;
+      text-align: center;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .flex-item:hover {
+      transform: scale(1.1);
+      background-color: lightgreen;
+    }
+
+    /* Grid container */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 20px;
+      padding: 10px;
+      background-color: #e0e0e0;
+    }
+
+    .grid-item {
+      background-color: lightseagreen;
+      padding: 20px;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    /* Keyframes for animation */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Block element styles */
+    .block {
+      background-color: lightblue;
+      padding: 10px;
+      margin: 10px 0;
+      width: 200px;
+      height: 50px;
+      transition: background-color 0.3s ease;
+    }
+
+    .block:hover {
+      background-color: lightgoldenrodyellow;
+    }
+
+    /* Inline element styles */
+    .inline {
+      background-color: lightcoral;
+      padding: 5px;
+      margin-right: 10px;
+      transition: color 0.3s ease;
+    }
+
+    .inline:hover {
+      color: white;
+    }
+
+    /* Optional: Visual separation to show inline elements side by side */
+    .inline a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .inline span {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Flexbox Example with Transition</h2>
+  <div class="flex-container">
+    <div class="flex-item">Flex 1</div>
+    <div class="flex-item">Flex 2</div>
+    <div class="flex-item">Flex 3</div>
+  </div>
+
+  <h2>Grid Example with Animation</h2>
+  <div class="grid-container">
+    <div class="grid-item">Grid 1</div>
+    <div class="grid-item">Grid 2</div>
+    <div class="grid-item">Grid 3</div>
+  </div>
+
+  <h2>Block Elements with Transition</h2>
+  <div class="block">This is a block element (div).</div>
+  <p class="block">This is a block element (p).</p>
+
+  <h2>Inline Elements with Transition</h2>
+  <span class="inline">This is an inline element (span).</span>
+  <a href="#" class="inline">This is an inline element (a).</a>
+
+</body>
+</html>
